@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Digital Trading App</title>
+</head>
+<body>
+    <header>
+        <h1>Digital Trading Application</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Beranda</a>
+            <a href="{{ url_for('stock') }}">Stok Barang</a>
+            <a href="{{ url_for('add_product') }}">Tambah Produk</a>  <!-- Link untuk tambah produk -->
+            <a href="{{ url_for('transactions') }}">Pengelola Transaksi</a>
+            <a href="{{ url_for('sales_report') }}">Laporan Penjualan</a>
+            <a href="{{ url_for('receipt_manager') }}">Pengelola Struk</a>
+            <a href="{{ url_for('inventory') }}">Daftar Barang Masuk dan Keluar</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>        
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
